@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-@Service  //暴露服务
+@Service  //暴露服务*/
 @Component
 public class UserServiceImpl implements UserService {
 

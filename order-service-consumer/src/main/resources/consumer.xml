@@ -13,8 +13,17 @@
 
     <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>
 
+
+    <!--配置本地存根-->
+
+
     <!--声明需要调用的远程服务的接口-->
-    <dubbo:reference interface="com.atguigu.gamll.service.UserService" id="userService"></dubbo:reference>
+    <!--timeout='0'超时-->
+
+    <dubbo:reference interface="com.atguigu.gamll.service.UserService" id="userService" timeout="5000" version="1.0.0" stub="com.atguigu.gamll.service.impl.UserServiceStub"></dubbo:reference>
+
+    <!--配置当前消费者的统一规则 : 所有的服务都不检查-->
+    <dubbo:consumer check="false"></dubbo:consumer>
 
     <dubbo:monitor protocol="registry"></dubbo:monitor>
     <!--<dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor>-->
