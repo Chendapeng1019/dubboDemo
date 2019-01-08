@@ -1,5 +1,9 @@
 package com.atguigu.gamll.service;
 
+import com.atguigu.gamll.bean.UserAddress;
+
+import java.util.List;
+
 /*
 
  *@ClassName OrderService
@@ -14,5 +18,5 @@ public interface OrderService {
      *
      * @param userId
      */
-    public void initOrder(String userId);
+    public List<UserAddress> initOrder(String userId);
 }

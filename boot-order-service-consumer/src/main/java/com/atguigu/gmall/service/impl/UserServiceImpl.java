@@ -1,20 +1,16 @@
-package com.atguigu.gamll.service.impl;/*
+package com.atguigu.gmall.service.impl;/*
  *@ClassName UserServiceImpl
  *@Description
  *@Author chendapeng
  *@Date 2019/1/7
  */
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.atguigu.gamll.bean.UserAddress;
 import com.atguigu.gamll.service.UserService;
-import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
-@Service  //暴露服务
-@Component
 public class UserServiceImpl implements UserService {
 
     public List<UserAddress> getUserAddressList(String userId) {

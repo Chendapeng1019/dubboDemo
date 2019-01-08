@@ -1,4 +1,4 @@
-package com.atguigu.gamll.service.impl;/*
+package com.atguigu.gmall.service.impl;/*
  *@ClassName OrderServiceImpl
  *@Description
  *@Author chendapeng
@@ -33,8 +33,6 @@ public class OrderServiceImpl implements OrderService {
         for (UserAddress userAddress : addressList) {
             System.out.println(userAddress);
         }
-
-        return addressList;
-
+       return addressList;
     }
 }
