@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot-order-service-consume" />
         <module name="boot-user-service-provider" />
         <module name="gamll-interface" />
         <module name="order-service-consumer" />
@@ -13,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="boot-order-service-consume" target="1.8" />
       <module name="boot-order-service-consumer" target="1.8" />
       <module name="boot-user-service-provider" target="1.8" />
       <module name="gamll-interface" target="1.5" />

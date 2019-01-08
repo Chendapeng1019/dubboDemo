@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/gamll-interface/pom.xml" />
         <option value="$PROJECT_DIR$/order-service-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/boot-user-service-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-order-service-consume/pom.xml" />
       </list>
     </option>
   </component>
