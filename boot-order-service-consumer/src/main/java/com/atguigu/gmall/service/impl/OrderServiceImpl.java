@@ -5,10 +5,10 @@ package com.atguigu.gmall.service.impl;/*
  *@Date 2019/1/7
  */
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.atguigu.gamll.bean.UserAddress;
 import com.atguigu.gamll.service.OrderService;
 import com.atguigu.gamll.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +22,8 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
+    /*@Autowired*/
+    @Reference
     UserService userService;
 
     public List<UserAddress> initOrder(String userId) {
