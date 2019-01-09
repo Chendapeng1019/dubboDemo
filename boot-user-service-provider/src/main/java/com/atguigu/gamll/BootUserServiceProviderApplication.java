@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ImportResource;
 
 /*@EnableDubbo //1.开启基于注解的dubbo功能*/
 /*@ImportResource(locations = "provider.xml")*/
-@EnableDubbo(scanBasePackages ="com.atguigu.gamll" )
+@EnableDubbo(scanBasePackages ="com.atguigu.gamll")
 @SpringBootApplication
 public class BootUserServiceProviderApplication {
 
