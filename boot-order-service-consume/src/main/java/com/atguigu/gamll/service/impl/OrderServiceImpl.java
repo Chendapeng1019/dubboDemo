@@ -9,8 +9,10 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.atguigu.gamll.bean.UserAddress;
 import com.atguigu.gamll.service.OrderService;
 import com.atguigu.gamll.service.UserService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -26,6 +28,7 @@ public class OrderServiceImpl implements OrderService {
     @Reference
     UserService userService;
 
+    @HystrixCommand(fallbackMethod = "hello")  //一旦出错回调hello方法
     public List<UserAddress> initOrder(String userId) {
 
         System.out.println("用户id:" + userId);
@@ -35,5 +38,10 @@ public class OrderServiceImpl implements OrderService {
             System.out.println(userAddress);
         }
        return addressList;
+    }
+
+    public List<UserAddress> hello(String userId) {
+
+        return Arrays.asList(new UserAddress(10,"测试地址","1","测试","测试","Y"));
     }
 }
